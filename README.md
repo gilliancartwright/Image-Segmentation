@@ -16,4 +16,5 @@ Thank you to Jimena González (@JimenaGonzalez) and Professor Keith Bechtol at t
 
 ***Packages:***
 * `lenstronomy`: "`lenstronomy` is a multi-purpose software package to model strong gravitational lenses." -- [read the docs here](https://lenstronomy.readthedocs.io/en/latest/index.html)
-* `pytorch`: "PyTorch is an optimized tensor library for deep learning using GPUs and CPUs." -- [read the docs here](https://pytorch.org/docs/stable/index.html)
+* `PyTorch`: "PyTorch is an optimized tensor library for deep learning using GPUs and CPUs." -- [read the docs here](https://pytorch.org/docs/stable/index.html)
+* `segmentation_models_pytorch`: "Python library with Neural Networks for Image Segmentation based on PyTorch" -- [read the docs here](https://segmentation-modelspytorch.readthedocs.io/en/latest/)
