@@ -1,6 +1,27 @@
 # Image-Segmentation
 Working with [@JimenaGonzalez](https://github.com/JimenaGonzalez) to use image segmentation for automated `lenstronomy` lens modeling.
 
+## File Descriptions:
+* Dockerfile: run in OSG to create container image (docker build). Run image to create container (docker run).
+* Labeling.ipynb: create training images from simulated data. Output is FITS file of original simulations and corresponding segmentation maps.
+* Segmentation-MultiClass.ipynb: script to create and train UNet using output of Labeling.ipynb. Output is trained model.pt.
+* Running-Segmentation.ipynb: Run trained UNet on candidates. Output is FITS file of original images with corresponding segmented images
+* Model.ipynb: script to model candidates. Requires output of UNet, but has not been updated to use the output of EfficientNet.
+  * get_rms: function to estimate the background noise based on output of UNet
+  * get_lens_coords ***(should be replaced with estimates from EfficientNet)***: function to estimate the center of the lens and upper/lower limits on lens location using output of UNet 
+  * approx_theta_E ***(should be replaced with estimates from EfficientNet)***: function to estimate the Einstein radius of the source using output of UNet
+  * add_mask: masks out noise determined by UNet
+  * Output of Model.ipynb: corner plot png, trace plot png, parameters text file, and image of observed, reconstructed, and residuals image for G, R, and I bands.
+* MakeLensModelPNGs.ipynb: script to compile output from Model.ipynb in OSG. The output of the script is a single png image per modeled candidate.
+
+
+
+
+
+
+
+
+
 ## Procedure:
 ![flowchart](https://github.com/gilliancartwright/Image-Segmentation/assets/106614337/15f25628-6429-4afe-82c5-b1b72b91bb51)
 
