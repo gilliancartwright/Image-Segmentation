@@ -18,11 +18,11 @@ Working with [@JimenaGonzalez](https://github.com/JimenaGonzalez) to use image s
 ![flowchart](https://github.com/gilliancartwright/Image-Segmentation/assets/106614337/15f25628-6429-4afe-82c5-b1b72b91bb51)
 
 * Step 1: [Simulate lens systems](https://github.com/JimenaGonzalez/Simulations-Double-Source-Gravitational-Lensing) ([@JimenaGonzalez](https://github.com/JimenaGonzalez))
-* Step 2: [Find lens candidates](https://github.com/JimenaGonzalez/Searching-double-lenses) [(González, 2025)](https://arxiv.org/abs/2501.15679)
-* Step 3: [Create training set]() for image segmentation using simulated lenses
-* Step 4: Use pre-trained U-Net & training set to [prepare image segmentation]()
-* Step 5: Run lens candidates through image segmentation
-* Step 6: Use `lenstronomy` model to [find lens models]() for lens candidates
+* Step 2: [Find lens candidates](https://github.com/JimenaGonzalez/Searching-double-lenses) (González, 2025) [arxiv](https://arxiv.org/abs/2501.15679)
+* Step 3: [Create training set](https://github.com/gilliancartwright/Image-Segmentation/blob/main/Labeling.ipynb) for image segmentation using simulated lenses
+* Step 4: Use pre-trained U-Net & training set to [train U-Net](https://github.com/gilliancartwright/Image-Segmentation/blob/main/Segmentation-MultiClass.ipynb)
+* Step 5: [Run lens candidates through image segmentation](https://github.com/gilliancartwright/Image-Segmentation/blob/main/Running-Segmentation.ipynb)
+* Step 6: Use `lenstronomy` model to [find lens models](https://github.com/gilliancartwright/Image-Segmentation/blob/main/Model.ipynb) for lens candidates
 
 ## Acknowledgements & Packages
 Thank you to Jimena González (@JimenaGonzalez) and Professor Keith Bechtol at the University of Wisconsin -- Madison for all of your support in this project. Also, thank you to Simon Birrer (@sibirrer) and Anowar Shajib (@ajshajib) for your expertise and guidance in the lens modeling process.
