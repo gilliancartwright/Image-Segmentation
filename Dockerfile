@@ -6,6 +6,9 @@ RUN apt-get update --yes --quiet && DEBIAN_FRONTEND=noninteractive apt-get insta
     build-essential wget \
     tar
 
+# testing stackoverflow suggestion for fixing import cv2 error
+RUN apt-get update && apt-get install ffmpeg libsm6 libxext6  -y
+
 # install miniconda
 RUN wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh && \
     bash Miniconda3-latest-Linux-x86_64.sh -b -f -p /opt/conda && \
@@ -20,9 +23,7 @@ RUN . /opt/conda/etc/profile.d/conda.sh && \
     conda install -y -c pytorch -c nvidia pytorch torchvision pytorch-cuda=11.7 && \
     conda install -y -c conda-forge segmentation-models-pytorch && \
     conda install -y -c anaconda scikit-learn && \
-    conda install -y -c conda-forge albumentations
-
-#pip install -U albumentations && \
+    pip install -U albumentations
 
 # set up environment for when using the container, this is for when 
 # we invoke the container with Apptainer/Singularity
